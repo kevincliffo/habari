@@ -15,6 +15,7 @@ class App extends StatelessWidget{
         title:"Habari",
         theme: ThemeData(
           primaryColor: Colors.blueAccent,
+          fontFamily: 'Ubuntu'
         ),
         //home:MainScreen(model:mainModel),
         home:MainScreen(),

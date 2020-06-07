@@ -46,6 +46,13 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-L.ttf
+        - asset: assets/fonts/Ubuntu-C.ttf
+          weight: 700 # indented more
+  
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
@@ -55,6 +62,8 @@ flutter:
     - assets/images/german_minister.jpg
     - assets/images/venture_capitalists.jpg
     - assets/images/stock_market.png
+   
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
