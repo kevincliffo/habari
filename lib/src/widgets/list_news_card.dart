@@ -8,81 +8,84 @@ class ListNewsCard extends StatelessWidget {
   final String source;
   final String link;
   final String image_name;
-  ListNewsCard({this.title, this.content, this.source, this.link, this.image_name});
+  ListNewsCard(
+      {this.title, this.content, this.source, this.link, this.image_name});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-      child:Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Text("$title", style:TextStyle(fontSize:20.0)),
-          Container(
-            height: 170.0,
-            width: 100.0,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/"+image_name),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.horizontal(),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black,
-                    blurRadius: 5.0,
-                    offset: Offset(0.0, 5.0))
+    return Container(
+      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+      child: Card(
+        child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(top: 7.0, bottom: 14.0),
+                  child: Text("$title", style: TextStyle(fontSize: 20.0)),
+                ),
+                Container(
+                  height: 170.0,
+                  width: 100.0,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/" + image_name),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.horizontal(),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 5.0,
+                          offset: Offset(0.0, 5.0))
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("From: Daily Nation",
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        )),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text("Category:Health",
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orangeAccent)),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10),
+                Text(
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem"),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    SizedBox(
+                      width: 0.0,
+                    ),
+                    FlatButton(
+                      color: Colors.blue,
+                      onPressed: () {},
+                      child:
+                          Text("Read More", style: TextStyle(fontSize: 18.0)),
+                    ),
+                    //icon:Icons.location_on,
+                    Icon(
+                      Icons.share,
+                    ),
+                  ],
+                ),
               ],
-            ),
-          ),
-          SizedBox(height:10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text("From: Daily Nation",
-                style:TextStyle(
-                  fontSize:18.0,
-                  fontWeight: FontWeight.bold,
-                )
-              ),
-              GestureDetector(
-                onTap: (){
-
-                },                
-                child: Text("Category:Health",
-                  style:TextStyle(
-                    fontSize:18.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.orangeAccent
-                  )
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height:10),
-          Text("Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem"),
-          SizedBox(height:10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              SizedBox(width: 0.0,),
-              FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  
-                },
-                child: Text(
-                  "Read More", style:TextStyle(fontSize:18.0)
-                ),
-              ),
-              //icon:Icons.location_on, 
-              Icon(
-                Icons.share,
-              ),
-            ],
-          ),
-        ],
-      )
+            )),
+      ),
     );
   }
 
@@ -93,7 +96,7 @@ class ListNewsCard extends StatelessWidget {
     } else {
       throw 'Could not launch $url';
     }
-  }  
+  }
 }
 
 //   GFCard(
