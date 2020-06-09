@@ -23,7 +23,11 @@ class ListNewsCard extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 7.0, bottom: 14.0),
-                  child: Text("$title", style: TextStyle(fontSize: 20.0)),
+                  child: Text("$title",
+                      style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: "Playfair Display",
+                          fontWeight: FontWeight.w700)),
                 ),
                 Container(
                   height: 170.0,

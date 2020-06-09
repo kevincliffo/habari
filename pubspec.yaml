@@ -1,5 +1,5 @@
 name: habari
-description: A new Flutter project.
+description: Personalized News Summary App
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -52,6 +52,14 @@ flutter:
         - asset: assets/fonts/Ubuntu-L.ttf
         - asset: assets/fonts/Ubuntu-C.ttf
           weight: 700 # indented more
+    - family: Playfair Display
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf
+        - asset: assets/fonts/PlayfairDisplay/static/PlayfairDisplay-Bold.ttf
+          weight: 700
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/Open_Sans/OpenSans-Regular.ttf
   
   uses-material-design: true
 
