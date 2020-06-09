@@ -34,12 +34,6 @@ class ListNewsCard extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.horizontal(),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black,
-                          blurRadius: 5.0,
-                          offset: Offset(0.0, 5.0))
-                    ],
                   ),
                 ),
                 SizedBox(height: 10.0),
