@@ -65,11 +65,10 @@ class ListNewsCard extends StatelessWidget {
                     SizedBox(
                       width: 0.0,
                     ),
-                    FlatButton(
-                      color: Colors.blue,
+                    OutlineButton(
                       onPressed: () {},
                       child:
-                          Text("Read More", style: TextStyle(fontSize: 18.0)),
+                          Text("Read More", style: TextStyle(fontSize: 16.0)),
                     ),
                     //icon:Icons.location_on,
                     Icon(
