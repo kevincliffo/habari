@@ -40,18 +40,18 @@ class ListNewsCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("From: Daily Nation",
+                    Text("Daily Nation",
                         style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        )),
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey)),
                     GestureDetector(
                       onTap: () {},
-                      child: Text("Category:Health",
+                      child: Text("Health",
                           style: TextStyle(
-                              fontSize: 18.0,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.orangeAccent)),
+                              color: Colors.grey)),
                     ),
                   ],
                 ),
