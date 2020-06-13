@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:habari/src/pages/home_page.dart';
-import 'package:habari/src/pages/list_page.dart';
+import 'package:habari/src/pages/topic_page.dart';
 import 'package:habari/src/pages/settings_page.dart';
 
 class MainScreen extends StatefulWidget {
@@ -13,16 +13,16 @@ class _MainScreenState extends State<MainScreen> {
   Widget currentPage;
   int currentTabIndex = 0;
   HomePage homePage;
-  ListPage listPage;
+  TopicPage topicPage;
   SettingsPage settingsPage;
 
   @override
   void initState() {
     homePage = HomePage();
-    listPage = ListPage();
+    topicPage = TopicPage();
     settingsPage = SettingsPage();
 
-    pages = [homePage, listPage, settingsPage];
+    pages = [homePage, topicPage, settingsPage];
     currentPage = homePage;
     super.initState();
   }
@@ -30,54 +30,25 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return
-        //SafeArea(
         Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey,
-        actions: <Widget>[
-          new IconButton(
-            icon: new Icon(Icons.list),
-            onPressed: () {},
-          ),
-        ],
         title: Text(
-          "Habari",
+          " The Gist",
           style: TextStyle(
             color: Colors.white,
             fontSize: 20.0,
+            fontWeight: FontWeight.bold
           ),
         ),
+        leading: IconButton(
+            icon: Image.asset('assets/images/logo.png'), 
+            onPressed: () { },
+          ),
         iconTheme: IconThemeData(
           color: Colors.white,
         ),
       ),
-      // appBar: AppBar(
-      //   title: Text("Habari",
-      //     style:TextStyle(
-      //       fontSize:18.0,
-      //       fontWeight: FontWeight.bold,
-      //     )
-      //   ),
-      //   backgroundColor:Colors.blueAccent,
-      //   elevation:0,
-      //   iconTheme: IconThemeData(color:Colors.black),
-      // ),
-      // drawer:Drawer(
-      //   child:Column(
-      //     children: <Widget>[
-      //       ListTile(
-      //         onTap: (){
-      //           Navigator.of(context).pop();
-      //           // Navigator.of(context).push(
-      //           //   MaterialPageRoute(builder:(BuildContext)=>AddFoodItem())
-      //           // );
-      //         },
-      //         leading: Icon(Icons.list),
-      //         title:Text("Add Food Item", style:TextStyle(fontSize:16.0),),
-      //       ),
-      //     ],
-      //   ),
-      // ),
       resizeToAvoidBottomPadding: false,
       bottomNavigationBar: BottomNavigationBar(
         onTap: (int index) {
@@ -105,7 +76,6 @@ class _MainScreenState extends State<MainScreen> {
       ),
       body: currentPage,
     );
-    //);
   }
 }
 

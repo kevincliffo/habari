@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       model: mainModel,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Habari",
+        title: "The Gist",
         theme: ThemeData(primaryColor: Colors.grey, fontFamily: 'Open Sans'),
         //home:MainScreen(model:mainModel),
         home: MainScreen(),

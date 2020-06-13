@@ -32,6 +32,7 @@ dependencies:
   scoped_model: ^1.0.1
   getflutter: ^1.0.11
   url_launcher: ^5.4.10
+  flutter_webview_plugin: ^0.3.11
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +71,7 @@ flutter:
     - assets/images/german_minister.jpg
     - assets/images/venture_capitalists.jpg
     - assets/images/stock_market.png
+    - assets/images/logo.png
    
 
 

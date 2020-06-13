@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:habari/src/widgets/home_top_info.dart';
 //import 'package:habari/src/widgets/search_field.dart';
-import 'package:habari/src/widgets/news_card.dart';
+//import 'package:habari/src/widgets/news_card.dart';
 import 'package:habari/src/widgets/list_news_card.dart';
 //import 'package:habari/src/models/news_model.dart';
 //import 'package:scoped_model/scoped_model.dart';
